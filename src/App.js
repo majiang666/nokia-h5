@@ -1,25 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import Navbar from './component/index/Navbar';
+import Index from './component/index/index';
+import Buy from './component/buy/buy';
+import Center from './component/center/center';
+import Classify from './component/classify/classify';
+import { Switch, Route } from 'react-router-dom';
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      
+    };
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="app">
+        <Switch>
+            <Route exact path='/' component={Index}/>
+            <Route path="/buy" component={Buy}/>
+            <Route path="/center" component={Center}/>
+            <Route path="/classify" component={Classify}/>
+        </Switch>
+        <Navbar />
       </div>
     );
   }
