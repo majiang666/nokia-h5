@@ -1,3 +1,5 @@
+## 我看官方用的是vue写的，我来用react写一个，也算是加深react的印象吧。
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
